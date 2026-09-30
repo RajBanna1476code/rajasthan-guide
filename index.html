@@ -4,763 +4,463 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rajasthan Roots | राजस्थान की जानकारी</title>
+<title>Rajasthan Roots | राजस्थान का इतिहास और संस्कृति</title>
+
+<meta name="description"
+content="राजस्थान के किले, महल, इतिहास, संस्कृति, राजपूत विरासत, महाराणा प्रताप, राणा कुम्भा और प्रमुख पर्यटन स्थलों की जानकारी।">
 
 <style>
 
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#fff8ed;
-color:#3a2117;
-overflow-x:hidden;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fff8ed;
+  color:#32190e;
+  line-height:1.7;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(62,29,18,.97);
-color:white;
-box-shadow:0 5px 25px #0004;
+  position:sticky;
+  top:0;
+  z-index:9999;
+  background:#35180d;
+  color:white;
+  padding:13px 5%;
+  box-shadow:0 4px 18px rgba(0,0,0,.25);
 }
 
-.topbar{
-padding:14px 18px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:15px;
+.nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
 }
 
 .logo{
-font-size:22px;
-font-weight:900;
-color:#ffd166;
-}
-
-.logo small{
-display:block;
-font-size:10px;
-color:#fff;
-letter-spacing:2px;
-margin-top:3px;
+  font-size:22px;
+  font-weight:bold;
+  color:#ffd166;
+  white-space:nowrap;
 }
 
 nav{
-display:flex;
-gap:7px;
-overflow-x:auto;
-padding:0 15px 13px;
-scrollbar-width:none;
-}
-
-nav::-webkit-scrollbar{
-display:none;
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-white-space:nowrap;
-padding:8px 12px;
-border-radius:20px;
-font-size:13px;
-transition:.3s;
+  color:white;
+  text-decoration:none;
+  padding:7px 11px;
+  border-radius:20px;
+  font-size:14px;
 }
 
 nav a:hover{
-background:#d96b27;
+  background:#a33a16;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
-min-height:650px;
-position:relative;
-overflow:hidden;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
+  min-height:520px;
+  padding:80px 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  position:relative;
+  overflow:hidden;
 
-background:
-linear-gradient(
-180deg,
-#8e3e24 0%,
-#df813d 45%,
-#f2b75c 60%,
-#b55c2e 100%
-);
-}
-
-.sun{
-position:absolute;
-width:125px;
-height:125px;
-border-radius:50%;
-background:#ffe29a;
-right:12%;
-top:75px;
-box-shadow:0 0 60px #ffe29a;
-animation:sun 4s infinite alternate;
-}
-
-@keyframes sun{
-to{
-transform:scale(1.12);
-box-shadow:0 0 90px #ffe29a;
-}
-}
-
-.dune{
-position:absolute;
-bottom:-120px;
-width:130%;
-height:280px;
-background:#c96e36;
-border-radius:50% 50% 0 0;
-transform:rotate(-3deg);
-}
-
-.dune2{
-bottom:-180px;
-background:#9d4b2a;
-transform:rotate(4deg);
+  background:
+  linear-gradient(rgba(35,12,4,.72),rgba(35,12,4,.75)),
+  url("https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1800&q=85")
+  center/cover;
 }
 
 .hero-content{
-position:relative;
-z-index:5;
-max-width:850px;
-padding:25px;
-animation:heroIn 1.2s ease;
-}
-
-@keyframes heroIn{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+  max-width:900px;
 }
 
 .hero h1{
-font-size:clamp(43px,9vw,82px);
-text-shadow:4px 5px 0 #542515;
-margin:12px 0;
-}
-
-.hero h2{
-color:#ffe29a;
-font-size:clamp(18px,4vw,28px);
+  font-size:clamp(38px,7vw,75px);
+  line-height:1.1;
+  color:#ffd166;
+  margin-bottom:20px;
 }
 
 .hero p{
-font-size:17px;
-line-height:1.8;
-margin-top:15px;
+  font-size:clamp(17px,3vw,23px);
 }
 
-.hero-button{
-display:inline-block;
-margin-top:25px;
-padding:15px 28px;
-background:#ffd166;
-color:#432113;
-text-decoration:none;
-font-weight:bold;
-border-radius:40px;
-box-shadow:0 8px 25px #0003;
-animation:bounce 2s infinite;
+.hero-btn{
+  display:inline-block;
+  margin-top:28px;
+  padding:13px 25px;
+  background:#d35400;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-@keyframes bounce{
-0%,100%{
-transform:translateY(0);
-}
-50%{
-transform:translateY(-7px);
-}
-}
+/* GENERAL */
 
-/* CAMEL */
-
-.camel{
-position:absolute;
-z-index:4;
-font-size:78px;
-bottom:105px;
-left:-180px;
-animation:camel 17s linear infinite;
-}
-
-@keyframes camel{
-from{
-left:-180px;
-}
-to{
-left:110%;
-}
-}
-
-/* floating stars */
-
-.star{
-position:absolute;
-color:#fff2bd;
-font-size:25px;
-animation:star 4s infinite ease-in-out;
-}
-
-.star1{
-top:20%;
-left:12%;
-}
-
-.star2{
-top:30%;
-right:20%;
-animation-delay:1s;
-}
-
-.star3{
-top:15%;
-left:50%;
-animation-delay:2s;
-}
-
-@keyframes star{
-50%{
-transform:translateY(-15px) scale(1.2);
-opacity:.6;
-}
-}
-
-/* ================= SECTION ================= */
-
-.section{
-padding:70px 18px;
-max-width:1150px;
-margin:auto;
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 18px;
 }
 
 .section-title{
-text-align:center;
-margin-bottom:40px;
+  text-align:center;
+  margin-bottom:40px;
 }
 
 .section-title h2{
-font-size:34px;
-color:#8b3f20;
+  font-size:clamp(30px,5vw,45px);
+  color:#7b260b;
 }
 
 .section-title p{
-margin-top:8px;
-color:#75594c;
+  color:#765;
 }
 
-/* ================= CARDS ================= */
+/* CARDS */
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
 .card{
-background:white;
-border-radius:24px;
-padding:24px;
-border:2px solid #f0c994;
-box-shadow:0 10px 30px #6c3c1b18;
-cursor:pointer;
-transition:.35s;
-position:relative;
-overflow:hidden;
-}
-
-.card:before{
-content:"";
-position:absolute;
-width:100px;
-height:100px;
-border-radius:50%;
-background:#ffd16630;
-right:-35px;
-top:-35px;
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(70,35,10,.14);
+  border:1px solid #f0d7bd;
+  cursor:pointer;
+  transition:.25s;
 }
 
 .card:hover{
-transform:translateY(-9px);
-box-shadow:0 18px 40px #6c3c1b30;
+  transform:translateY(-7px);
+  box-shadow:0 15px 35px rgba(70,35,10,.22);
 }
 
-.icon{
-font-size:58px;
-display:inline-block;
-animation:icon 3s infinite ease-in-out;
+.card img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  display:block;
 }
 
-@keyframes icon{
-50%{
-transform:translateY(-8px) rotate(3deg);
-}
+.card-body{
+  padding:18px;
 }
 
 .card h3{
-margin:13px 0 8px;
-font-size:22px;
-color:#8b3f20;
+  color:#8b2e0b;
+  font-size:23px;
+  margin-bottom:6px;
 }
 
 .card p{
-line-height:1.7;
-color:#665147;
+  color:#665247;
 }
 
-.click{
-display:inline-block;
-margin-top:15px;
-background:#d96b27;
-color:white;
-padding:8px 14px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
+.open-text{
+  margin-top:12px;
+  display:inline-block;
+  color:#c34808;
+  font-weight:bold;
 }
 
-/* ================= ANIMATION AREA ================= */
+/* HISTORY */
 
-.animation-section{
-background:#3c2117;
-max-width:none;
-color:white;
-}
-
-.animation-inner{
-max-width:1150px;
-margin:auto;
+.history-box{
+  background:#fff;
+  border-left:7px solid #bd4b15;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  margin-bottom:22px;
 }
 
-.animation-inner .section-title h2{
-color:#ffd166;
+.history-box h3{
+  color:#7c270c;
+  margin-bottom:8px;
+  font-size:25px;
 }
 
-.animation-inner .section-title p{
-color:#e5c5ad;
+.history-box strong{
+  color:#9b3a0c;
 }
 
-.animation-card{
-background:#542e20;
-border:1px solid #87513a;
-border-radius:25px;
-overflow:hidden;
-cursor:pointer;
-transition:.3s;
+/* PEOPLE */
+
+.people{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
 }
 
-.animation-card:hover{
-transform:scale(1.025);
+.person{
+  background:#35180d;
+  color:white;
+  padding:28px;
+  border-radius:20px;
 }
 
-.scene{
-height:230px;
-position:relative;
-overflow:hidden;
-background:linear-gradient(#e89b50,#c96935);
+.person h3{
+  color:#ffd166;
+  font-size:27px;
+  margin-bottom:10px;
 }
 
-.scene-sun{
-position:absolute;
-width:65px;
-height:65px;
-background:#ffe29a;
-border-radius:50%;
-right:30px;
-top:25px;
-box-shadow:0 0 40px #ffe29a;
-animation:sun 3s infinite alternate;
+/* PLACES */
+
+.place-list{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
 }
 
-.scene-dune{
-position:absolute;
-width:130%;
-height:120px;
-bottom:-45px;
-left:-15%;
-border-radius:50%;
-background:#a9522d;
-animation:dunes 5s infinite alternate;
+.place{
+  background:white;
+  padding:17px;
+  border-radius:14px;
+  border:1px solid #ecd4bd;
 }
 
-@keyframes dunes{
-from{
-transform:translateX(-15px);
-}
-to{
-transform:translateX(15px);
-}
+.place b{
+  color:#8b2e0b;
 }
 
-.scene-camel{
-position:absolute;
-font-size:60px;
-bottom:55px;
-left:-100px;
-animation:miniCamel 8s linear infinite;
+/* BUTTONS */
+
+.btn{
+  display:inline-block;
+  margin-top:12px;
+  margin-right:7px;
+  padding:10px 16px;
+  background:#8e2f0c;
+  color:white;
+  border-radius:25px;
+  text-decoration:none;
+  font-size:14px;
 }
 
-@keyframes miniCamel{
-to{
-left:110%;
-}
+.btn:hover{
+  background:#bd4b15;
 }
 
-/* safa person */
+/* CONTACT */
 
-.safa-person{
-position:absolute;
-font-size:72px;
-bottom:38px;
-left:50%;
-transform:translateX(-50%);
-animation:walk 1.5s infinite alternate;
-}
-
-@keyframes walk{
-to{
-transform:translateX(-50%) rotate(4deg);
-}
-}
-
-.safa-top{
-position:absolute;
-width:65px;
-height:25px;
-background:#d62828;
-border-radius:50%;
-top:57px;
-left:50%;
-transform:translateX(-50%);
-animation:safa 1s infinite alternate;
-}
-
-@keyframes safa{
-to{
-transform:translateX(-50%) rotate(7deg);
-}
-}
-
-/* food animation */
-
-.food-scene{
-background:linear-gradient(#f5c16e,#e68b42);
-}
-
-.plate{
-position:absolute;
-width:180px;
-height:75px;
-background:white;
-border-radius:50%;
-left:50%;
-top:55%;
-transform:translate(-50%,-50%);
-box-shadow:0 12px 25px #0004;
-}
-
-.baati{
-position:absolute;
-width:35px;
-height:35px;
-border-radius:50%;
-background:#a9572c;
-top:18px;
-animation:baati 1.5s infinite alternate;
-}
-
-.baati1{
-left:25px;
-}
-
-.baati2{
-left:73px;
-animation-delay:.3s;
-}
-
-.baati3{
-left:120px;
-animation-delay:.6s;
-}
-
-@keyframes baati{
-to{
-transform:translateY(-9px);
-}
-}
-
-.churma{
-position:absolute;
-right:25px;
-top:25px;
-width:30px;
-height:25px;
-border-radius:50%;
-background:#e2a13a;
-}
-
-/* fort */
-
-.fort{
-position:absolute;
-font-size:110px;
-left:50%;
-bottom:25px;
-transform:translateX(-50%);
-animation:fort 3s infinite alternate;
-}
-
-@keyframes fort{
-to{
-filter:brightness(1.25);
-transform:translateX(-50%) scale(1.03);
-}
-}
-
-/* folk */
-
-.folk-scene{
-background:radial-gradient(circle,#b95035,#3d2117);
-}
-
-.dancer{
-position:absolute;
-left:50%;
-top:50%;
-transform:translate(-50%,-50%);
-font-size:85px;
-animation:dance 1s infinite alternate;
-}
-
-@keyframes dance{
-from{
-transform:translate(-50%,-50%) rotate(-9deg);
-}
-to{
-transform:translate(-50%,-50%) rotate(9deg) scale(1.08);
-}
-}
-
-.animation-info{
-padding:18px;
-}
-
-.animation-info h3{
-color:#ffd166;
-margin-bottom:7px;
-}
-
-/* ================= CONTACT ================= */
-
-.contact-wrap{
-background:linear-gradient(135deg,#ffe9bd,#ffd18b);
-border-radius:30px;
-padding:35px 20px;
-text-align:center;
-box-shadow:0 10px 30px #6c3c1b18;
+.contact{
+  background:#35180d;
+  color:white;
 }
 
 .contact-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:16px;
-margin-top:25px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
 }
 
-.contact-card{
-background:white;
-border-radius:20px;
-padding:23px;
-transition:.3s;
+.contact a{
+  color:white;
+  text-decoration:none;
 }
 
-.contact-card:hover{
-transform:translateY(-5px);
+.contact-box{
+  background:#522614;
+  padding:20px;
+  border-radius:16px;
+  text-align:center;
 }
 
-.contact-icon{
-font-size:40px;
+.contact-box span{
+  display:block;
+  font-size:28px;
+  margin-bottom:5px;
 }
 
-.contact-card h3{
-margin:10px 0;
-color:#8b3f20;
-}
-
-.contact-card a{
-color:#a44700;
-font-weight:bold;
-text-decoration:none;
-word-break:break-word;
-}
-
-/* ================= MODAL ================= */
+/* MODAL */
 
 .modal{
-display:none;
-position:fixed;
-z-index:3000;
-inset:0;
-background:#180c08ee;
-align-items:center;
-justify-content:center;
-padding:18px;
+  position:fixed;
+  inset:0;
+  background:rgba(15,7,3,.82);
+  z-index:10000;
+  display:none;
+  overflow-y:auto;
+  padding:25px 12px;
+}
+
+.modal.active{
+  display:block;
 }
 
 .modal-box{
-width:min(850px,100%);
-max-height:92vh;
-overflow:auto;
-background:#fff8ed;
-border-radius:28px;
-padding:25px;
-position:relative;
-animation:modal .3s ease;
+  width:min(950px,100%);
+  margin:20px auto;
+  background:#fffaf2;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+  animation:popup .22s ease;
 }
 
-@keyframes modal{
-from{
-transform:scale(.8);
-opacity:0;
+@keyframes popup{
+  from{
+    transform:scale(.94);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
 }
-to{
-transform:scale(1);
-opacity:1;
+
+.modal-head{
+  position:relative;
 }
+
+.modal-head img{
+  width:100%;
+  height:330px;
+  object-fit:cover;
 }
 
 .close{
-position:absolute;
-right:15px;
-top:15px;
-width:42px;
-height:42px;
-border:0;
-border-radius:50%;
-background:#8b3f20;
-color:white;
-font-size:24px;
-cursor:pointer;
+  position:absolute;
+  right:15px;
+  top:15px;
+  width:45px;
+  height:45px;
+  border:0;
+  border-radius:50%;
+  background:#35180d;
+  color:white;
+  font-size:25px;
+  cursor:pointer;
 }
 
-.modal h2{
-color:#8b3f20;
-margin-bottom:15px;
-padding-right:45px;
+.modal-content{
+  padding:28px;
 }
 
-.modal p{
-line-height:1.8;
-color:#5d493e;
+.modal-content h2{
+  color:#7c270c;
+  font-size:34px;
+  margin-bottom:10px;
 }
 
-/* ================= FOOTER ================= */
+.modal-content h3{
+  color:#9c3b0b;
+  margin-top:22px;
+  margin-bottom:7px;
+  font-size:23px;
+}
+
+.modal-content p{
+  margin-bottom:10px;
+}
+
+/* FOOTER */
 
 footer{
-background:#24140d;
-color:white;
-padding:40px 18px;
-text-align:center;
+  background:#1f0d07;
+  color:#ddd;
+  text-align:center;
+  padding:30px 15px;
 }
 
-.footer-logo{
-font-size:27px;
-font-weight:bold;
-color:#ffd166;
+footer strong{
+  color:#ffd166;
 }
 
-.footer-links{
-margin:20px 0;
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .contact-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .people{
+    grid-template-columns:1fr;
+  }
+
 }
 
-.footer-links a{
-color:white;
-text-decoration:none;
-padding:9px 14px;
-background:#ffffff12;
-border-radius:20px;
-}
+@media(max-width:600px){
 
-.footer-copy{
-color:#cdb4a5;
-font-size:13px;
-margin-top:15px;
-}
+  header{
+    position:relative;
+  }
 
-/* ================= MOBILE ================= */
+  .nav{
+    flex-direction:column;
+  }
 
-@media(max-width:650px){
+  nav{
+    justify-content:center;
+  }
 
-.topbar{
-display:block;
-}
+  nav a{
+    font-size:13px;
+  }
 
-.logo{
-margin-bottom:10px;
-}
+  .hero{
+    min-height:460px;
+  }
 
-.hero{
-min-height:590px;
-}
+  .grid{
+    grid-template-columns:1fr;
+  }
 
-.hero h1{
-font-size:45px;
-}
+  .place-list{
+    grid-template-columns:1fr;
+  }
 
-.hero p{
-font-size:15px;
-}
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
 
-.camel{
-font-size:60px;
-bottom:100px;
-}
+  .modal-head img{
+    height:220px;
+  }
 
-.section{
-padding:55px 15px;
-}
+  .modal-content{
+    padding:20px;
+  }
 
-.section-title h2{
-font-size:27px;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.animation-card{
-width:100%;
-}
+  .modal-content h2{
+    font-size:28px;
+  }
 
 }
 
@@ -769,67 +469,37 @@ width:100%;
 
 <body>
 
-
-<!-- ================= HEADER ================= -->
-
 <header>
 
-<div class="topbar">
+<div class="nav">
 
-<div class="logo">
-🌵 Rajasthan Roots
-<small>THE COLOURFUL RAJASTHAN</small>
-</div>
-
-</div>
+<div class="logo">🏰 RAJASTHAN ROOTS</div>
 
 <nav>
-
-<a href="#home">Home</a>
-<a href="#cities">Cities</a>
-<a href="#culture">Culture</a>
-<a href="#food">Food</a>
-<a href="#travel">Travel</a>
-<a href="#animations">Animations</a>
+<a href="#cities">शहर</a>
+<a href="#history">इतिहास</a>
+<a href="#rajput">राजपूत इतिहास</a>
+<a href="#places">दर्शनीय स्थल</a>
 <a href="#contact">Contact</a>
-
 </nav>
+
+</div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="home">
-
-<div class="sun"></div>
-
-<div class="star star1">✦</div>
-<div class="star star2">✦</div>
-<div class="star star3">✧</div>
-
-<div class="dune"></div>
-<div class="dune dune2"></div>
-
-<div class="camel">🐪</div>
+<section class="hero">
 
 <div class="hero-content">
 
-<div style="font-size:42px;">
-❤️ पधारो म्हारे राजस्थान
-</div>
-
-<h1>राजस्थान</h1>
-
-<h2>RAJASTHAN — The Land of Colours</h2>
+<h1>पधारो म्हारे राजस्थान</h1>
 
 <p>
-राजस्थान के शहर, संस्कृति, खाना, रेगिस्तान,
-किले और घूमने की जगहों को एक ही जगह explore करें।
+किले • महल • संस्कृति • राजपूत विरासत • इतिहास • पर्यटन
 </p>
 
-<a href="#cities" class="hero-button">
-✨ Explore Rajasthan
+<a href="#cities" class="hero-btn">
+राजस्थान एक्सप्लोर करें →
 </a>
 
 </div>
@@ -837,15 +507,17 @@ width:100%;
 </section>
 
 
-<!-- ================= CITIES ================= -->
+<!-- CITIES -->
 
-<section class="section" id="cities">
+<section class="container" id="cities">
 
 <div class="section-title">
 
-<h2>📍 राजस्थान के शहर</h2>
+<h2>राजस्थान के प्रमुख शहर</h2>
 
-<p>Discover the colours and stories of Rajasthan</p>
+<p>
+किसी भी शहर पर क्लिक करें और उसकी कहानी, इतिहास और घूमने की जगहें देखें।
+</p>
 
 </div>
 
@@ -853,466 +525,213 @@ width:100%;
 <div class="grid">
 
 
-<div class="card" onclick="openInfo('jaipur')">
+<div class="card" onclick="openCity('jaisalmer')">
 
-<div class="icon">🏯</div>
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaisalmer%20Fort.jpg">
 
-<h3>जयपुर</h3>
+<div class="card-body">
 
-<p>
-Pink City — heritage, palaces और colourful markets.
-</p>
+<h3>🏜️ जैसलमेर</h3>
 
-<span class="click">
-Explore Jaipur →
-</span>
+<p>सोनार किला, हवेलियाँ और थार का स्वर्णिम शहर।</p>
+
+<span class="open-text">पूरी जानकारी खोलें →</span>
+
+</div>
+</div>
+
+
+<div class="card" onclick="openCity('bikaner')">
+
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Junagarh%20Fort.jpg">
+
+<div class="card-body">
+
+<h3>🐪 बीकानेर</h3>
+
+<p>जूनागढ़ किला, लालगढ़ और ऊँट संस्कृति के लिए प्रसिद्ध।</p>
+
+<span class="open-text">पूरी जानकारी खोलें →</span>
+
+</div>
+</div>
+
+
+<div class="card" onclick="openCity('jodhpur')">
+
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mehrangarh%20Fort%20jodhpur.jpg">
+
+<div class="card-body">
+
+<h3>🔵 जोधपुर</h3>
+
+<p>ब्लू सिटी और विशाल मेहरानगढ़ दुर्ग का शहर।</p>
+
+<span class="open-text">पूरी जानकारी खोलें →</span>
+
+</div>
+</div>
+
+
+<div class="card" onclick="openCity('udaipur')">
+
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/City%20Palace%20of%20Udaipur.jpg">
+
+<div class="card-body">
+
+<h3>🌊 उदयपुर</h3>
+
+<p>झीलों, महलों और मेवाड़ की ऐतिहासिक विरासत का शहर।</p>
+
+<span class="open-text">पूरी जानकारी खोलें →</span>
+
+</div>
+</div>
+
+
+<div class="card" onclick="openCity('barmer')">
+
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fort%20of%20Siwana%20-%20Barmer%20-%20Rajasthan%20-%20003.jpg">
+
+<div class="card-body">
+
+<h3>🎨 बाड़मेर</h3>
+
+<p>लोक कला, हस्तशिल्प, रेगिस्तान और किराडू मंदिरों की धरती।</p>
+
+<span class="open-text">पूरी जानकारी खोलें →</span>
+
+</div>
+</div>
+
+
+<div class="card" onclick="openCity('kota')">
+
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Garh%20Palace%20kota.jpg">
+
+<div class="card-body">
+
+<h3>🏞️ कोटा</h3>
+
+<p>चंबल, गढ़ पैलेस और हाड़ौती की ऐतिहासिक संस्कृति।</p>
+
+<span class="open-text">पूरी जानकारी खोलें →</span>
+
+</div>
+</div>
+
+
+</div>
+</section>
+
+
+<!-- HISTORY -->
+
+<section class="container" id="history">
+
+<div class="section-title">
+
+<h2>राजस्थान का इतिहास</h2>
+
+<p>रेगिस्तान से राजमहलों तक — राजस्थान की ऐतिहासिक यात्रा।</p>
 
 </div>
 
 
-<div class="card" onclick="openInfo('jaisalmer')">
+<div class="history-box">
 
-<div class="icon">🏜️</div>
-
-<h3>जैसलमेर</h3>
+<h3>🏰 राजपूत राज्यों की विरासत</h3>
 
 <p>
-Golden City — desert, fort और sunset experiences.
+राजस्थान के इतिहास में अनेक राजवंशों और राज्यों का महत्वपूर्ण योगदान रहा है।
+मेवाड़, मारवाड़, आमेर/जयपुर, बीकानेर, जैसलमेर, बूंदी, कोटा और अन्य क्षेत्रों
+में अलग-अलग राजघरानों ने शासन किया। इन राज्यों की स्थापत्य कला, दुर्ग,
+महल, मंदिर और लोक परंपराएँ आज भी राजस्थान की पहचान का हिस्सा हैं।
 </p>
-
-<span class="click">
-Explore Jaisalmer →
-</span>
 
 </div>
 
 
-<div class="card" onclick="openInfo('bikaner')">
+<div class="history-box">
 
-<div class="icon">🐪</div>
-
-<h3>बीकानेर</h3>
+<h3>⚔️ किले और दुर्ग</h3>
 
 <p>
-Desert city, heritage, local food और culture.
+राजस्थान के दुर्ग केवल सैन्य संरचनाएँ नहीं थे; कई दुर्गों के भीतर महल,
+मंदिर, जल-संरचनाएँ, बाजार और प्रशासनिक परिसर भी विकसित हुए।
+जैसलमेर, चित्तौड़गढ़, कुम्भलगढ़, आमेर और मेहरानगढ़ जैसे दुर्ग राजस्थान
+की स्थापत्य और राजनीतिक इतिहास की महत्वपूर्ण कड़ियाँ हैं।
 </p>
-
-<span class="click">
-Explore Bikaner →
-</span>
 
 </div>
 
 
-<div class="card" onclick="openInfo('jodhpur')">
+<div class="history-box">
 
-<div class="icon">💙</div>
-
-<h3>जोधपुर</h3>
+<h3>🎨 संस्कृति और जीवन</h3>
 
 <p>
-Blue City — historic streets और शानदार heritage.
+राजस्थानी संस्कृति में लोक संगीत, लोक नृत्य, कठपुतली, पारंपरिक वस्त्र,
+साफा/पगड़ी, हस्तशिल्प, चित्रकला और क्षेत्रीय खान-पान की विशेष पहचान है।
+अलग-अलग क्षेत्रों की बोलियों और परंपराओं ने राजस्थान की सांस्कृतिक
+विविधता को समृद्ध बनाया है।
 </p>
-
-<span class="click">
-Explore Jodhpur →
-</span>
-
-</div>
 
 </div>
 
 </section>
 
 
-<!-- ================= CULTURE ================= -->
+<!-- RAJPUT HISTORY -->
 
-<section class="section" id="culture">
-
-<div class="section-title">
-
-<h2>👳 Rajasthan Culture</h2>
-
-<p>Tradition • People • Music • Heritage</p>
-
-</div>
-
-
-<div class="grid">
-
-
-<div class="card" onclick="openInfo('safa')">
-
-<div class="icon">👳</div>
-
-<h3>राजस्थानी साफा</h3>
-
-<p>
-रंग-बिरंगे साफे और पारंपरिक पहनावे की झलक।
-</p>
-
-<span class="click">
-Animation देखें →
-</span>
-
-</div>
-
-
-<div class="card" onclick="openInfo('folk')">
-
-<div class="icon">💃</div>
-
-<h3>लोक संस्कृति</h3>
-
-<p>
-लोक नृत्य, संगीत और राजस्थान की रंगीन परंपराएँ।
-</p>
-
-<span class="click">
-Open Animation →
-</span>
-
-</div>
-
-
-<div class="card" onclick="openInfo('desert')">
-
-<div class="icon">🐪</div>
-
-<h3>थार रेगिस्तान</h3>
-
-<p>
-Golden dunes, camel journey और desert sunset.
-</p>
-
-<span class="click">
-Explore →
-</span>
-
-</div>
-
-
-<div class="card" onclick="openInfo('fort')">
-
-<div class="icon">🏰</div>
-
-<h3>किले और विरासत</h3>
-
-<p>
-राजस्थान के historic forts और architecture.
-</p>
-
-<span class="click">
-देखें →
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= FOOD ================= -->
-
-<section class="section" id="food">
+<section class="container" id="rajput">
 
 <div class="section-title">
 
-<h2>🍛 Rajasthani Food</h2>
+<h2>राजपूत इतिहास के प्रमुख अध्याय</h2>
 
-<p>राजस्थान का स्वाद</p>
+<p>इतिहास को तथ्यात्मक रूप से समझने के लिए प्रमुख व्यक्तित्व और घटनाएँ।</p>
 
 </div>
 
 
-<div class="grid">
+<div class="people">
 
 
-<div class="card" onclick="openInfo('dalbati')">
+<div class="person">
 
-<div class="icon">🍛</div>
-
-<h3>दाल बाटी चूरमा</h3>
+<h3>⚔️ महाराणा प्रताप</h3>
 
 <p>
-राजस्थान के प्रसिद्ध पारंपरिक व्यंजनों में से एक।
+महाराणा प्रताप मेवाड़ के सिसोदिया राजवंश के शासक थे। उनका जन्म
+1540 में हुआ और वे मेवाड़ के इतिहास में विशेष रूप से मुगल सम्राट
+अकबर के समय अपने संघर्ष के लिए प्रसिद्ध हैं।
 </p>
 
-<span class="click">
-Food Animation →
-</span>
-
-</div>
-
-
-<div class="card" onclick="openInfo('kachori')">
-
-<div class="icon">🥟</div>
-
-<h3>प्याज़ कचौरी</h3>
-
 <p>
-राजस्थानी स्वाद वाली लोकप्रिय कचौरी।
-</p>
-
-<span class="click">
-Explore →
-</span>
-
-</div>
-
-
-<div class="card" onclick="openInfo('gatte')">
-
-<div class="icon">🍲</div>
-
-<h3>गट्टे की सब्जी</h3>
-
-<p>
-राजस्थान के traditional food की खास dish.
-</p>
-
-<span class="click">
-Explore →
-</span>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= ANIMATIONS ================= -->
-
-<section class="section animation-section" id="animations">
-
-<div class="animation-inner">
-
-<div class="section-title">
-
-<h2>🎬 Rajasthan Animated World</h2>
-
-<p>
-किसी भी scene पर click करें और animation बड़ी screen में देखें।
+1576 का हल्दीघाटी युद्ध महाराणा प्रताप और मुगल पक्ष के बीच हुआ।
+युद्ध के बाद भी महाराणा प्रताप ने मेवाड़ के कई क्षेत्रों में अपना
+संघर्ष जारी रखा। उनके जीवन से जुड़े स्थल आज राजस्थान के प्रमुख
+ऐतिहासिक पर्यटन स्थलों में शामिल हैं।
 </p>
 
 </div>
 
 
-<div class="grid">
+<div class="person">
 
-
-<!-- DESERT -->
-
-<div class="animation-card" onclick="openInfo('desert')">
-
-<div class="scene">
-
-<div class="scene-sun"></div>
-
-<div class="scene-dune"></div>
-
-<div class="scene-camel">🐪</div>
-
-</div>
-
-<div class="animation-info">
-
-<h3>🐪 Thar Desert Journey</h3>
+<h3>🏰 राणा कुम्भा</h3>
 
 <p>
-रेगिस्तान में camel journey
+राणा कुम्भा 15वीं शताब्दी में मेवाड़ के शासक थे। उनके शासनकाल में
+मेवाड़ में कई महत्वपूर्ण दुर्ग और स्थापत्य कार्य विकसित हुए।
 </p>
-
-</div>
-
-</div>
-
-
-<!-- SAFA -->
-
-<div class="animation-card" onclick="openInfo('safa')">
-
-<div class="scene">
-
-<div class="scene-dune"></div>
-
-<div class="safa-top"></div>
-
-<div class="safa-person">🧔</div>
-
-</div>
-
-<div class="animation-info">
-
-<h3>👳 Rajasthani Safa</h3>
 
 <p>
-Traditional Rajasthan style
+कुम्भलगढ़ दुर्ग से उनका नाम विशेष रूप से जुड़ा है। कुम्भलगढ़ की
+विशाल दुर्ग-प्रणाली और इसकी पहाड़ी स्थिति मेवाड़ की सैन्य एवं
+स्थापत्य परंपरा को समझने में महत्वपूर्ण है।
 </p>
-
-</div>
-
-</div>
-
-
-<!-- FOOD -->
-
-<div class="animation-card" onclick="openInfo('dalbati')">
-
-<div class="scene food-scene">
-
-<div class="plate">
-
-<div class="baati baati1"></div>
-
-<div class="baati baati2"></div>
-
-<div class="baati baati3"></div>
-
-<div class="churma"></div>
-
-</div>
-
-</div>
-
-<div class="animation-info">
-
-<h3>🍛 Dal Baati Churma</h3>
-
-<p>
-Traditional food animation
-</p>
-
-</div>
-
-</div>
-
-
-<!-- FORT -->
-
-<div class="animation-card" onclick="openInfo('fort')">
-
-<div class="scene">
-
-<div class="scene-sun"></div>
-
-<div class="fort">
-🏰
-</div>
-
-</div>
-
-<div class="animation-info">
-
-<h3>🏰 Royal Rajasthan</h3>
-
-<p>
-Fort & heritage animation
-</p>
-
-</div>
-
-</div>
-
-
-<!-- FOLK -->
-
-<div class="animation-card" onclick="openInfo('folk')">
-
-<div class="scene folk-scene">
-
-<div class="dancer">
-💃
-</div>
-
-</div>
-
-<div class="animation-info">
-
-<h3>💃 Folk Culture</h3>
-
-<p>
-Colourful Rajasthan
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= TRAVEL ================= -->
-
-<section class="section" id="travel">
-
-<div class="section-title">
-
-<h2>🧳 Rajasthan Travel</h2>
-
-<p>Explore Rajasthan</p>
-
-</div>
-
-
-<div class="grid">
-
-
-<div class="card" onclick="openInfo('desert')">
-
-<div class="icon">🏜️</div>
-
-<h3>Desert</h3>
-
-<p>
-Golden dunes और Rajasthan का desert experience.
-</p>
-
-<span class="click">
-Explore →
-</span>
-
-</div>
-
-
-<div class="card" onclick="openInfo('fort')">
-
-<div class="icon">🏰</div>
-
-<h3>Forts</h3>
-
-<p>
-Historic forts और royal architecture.
-</p>
-
-<span class="click">
-Explore →
-</span>
-
-</div>
-
-
-<div class="card" onclick="openInfo('travel')">
-
-<div class="icon">🚗</div>
-
-<h3>Travel Guide</h3>
-
-<p>
-Rajasthan trip planning और travel information.
-</p>
-
-<span class="click">
-Open Guide →
-</span>
 
 </div>
 
@@ -1322,19 +741,67 @@ Open Guide →
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- PLACES -->
 
-<section class="section" id="contact">
-
-<div class="contact-wrap">
+<section class="container" id="places">
 
 <div class="section-title">
 
-<h2>📞 Connect With Us</h2>
+<h2>कहाँ-कहाँ घूम सकते हैं?</h2>
 
-<p>
-Rajasthan से जुड़ें और हमसे संपर्क करें
-</p>
+<p>शहर के अनुसार प्रमुख ऐतिहासिक और पर्यटन स्थल।</p>
+
+</div>
+
+
+<div class="place-list">
+
+<div class="place">
+<b>जैसलमेर</b><br>
+जैसलमेर किला • पटवों की हवेली • नथमल की हवेली • सलीम सिंह की हवेली • बड़ा बाग • थार डेजर्ट
+</div>
+
+<div class="place">
+<b>बीकानेर</b><br>
+जूनागढ़ किला • लालगढ़ पैलेस • लक्ष्मी निवास पैलेस • करणी माता मंदिर, देशनोक • रामपुरिया हवेलियाँ
+</div>
+
+<div class="place">
+<b>जोधपुर</b><br>
+मेहरानगढ़ दुर्ग • जसवंत थड़ा • उम्मेद भवन पैलेस • मंडोर गार्डन • घंटाघर और सरदार मार्केट
+</div>
+
+<div class="place">
+<b>उदयपुर</b><br>
+सिटी पैलेस • पिछोला झील • जगदीश मंदिर • सहेलियों की बाड़ी • सज्जनगढ़/मॉनसून पैलेस
+</div>
+
+<div class="place">
+<b>बाड़मेर</b><br>
+किराडू मंदिर • सिवाना दुर्ग • बाड़मेर किला क्षेत्र • लोक कला और हस्तशिल्प बाजार
+</div>
+
+<div class="place">
+<b>कोटा</b><br>
+गढ़ पैलेस • कोटा बैराज • चंबल गार्डन • किशोर सागर • जगमंदिर
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 style="color:#ffd166;">Contact Rajasthan Roots</h2>
+
+<p style="color:#eee;">संपर्क और सोशल मीडिया</p>
 
 </div>
 
@@ -1342,15 +809,9 @@ Rajasthan से जुड़ें और हमसे संपर्क क�
 <div class="contact-grid">
 
 
-<!-- EMAIL -->
+<div class="contact-box">
 
-<div class="contact-card">
-
-<div class="contact-icon">
-📧
-</div>
-
-<h3>Email</h3>
+<span>📧</span>
 
 <a href="mailto:vilogs07@gmail.com">
 vilogs07@gmail.com
@@ -1359,15 +820,9 @@ vilogs07@gmail.com
 </div>
 
 
-<!-- MOBILE -->
+<div class="contact-box">
 
-<div class="contact-card">
-
-<div class="contact-icon">
-📱
-</div>
-
-<h3>Mobile</h3>
+<span>📱</span>
 
 <a href="tel:+918949155790">
 +91 8949155790
@@ -1376,43 +831,25 @@ vilogs07@gmail.com
 </div>
 
 
-<!-- INSTAGRAM -->
+<div class="contact-box">
 
-<div class="contact-card">
+<span>📸</span>
 
-<div class="contact-icon">
-📸
-</div>
-
-<h3>Instagram</h3>
-
-<a
-href="https://instagram.com/shiva_banna_shekhawat"
-target="_blank"
-rel="noopener"
->
+<a href="https://instagram.com/shiva_banna_shekhawat"
+target="_blank">
 @shiva_banna_shekhawat
 </a>
 
 </div>
 
 
-<!-- FACEBOOK -->
+<div class="contact-box">
 
-<div class="contact-card">
+<span>🌐</span>
 
-<div class="contact-icon">
-👍
-</div>
-
-<h3>Facebook</h3>
-
-<a
-href="https://www.facebook.com/"
-target="_blank"
-rel="noopener"
->
-Visit Facebook
+<a href="https://www.google.com/search?q=Rajasthan+history"
+target="_blank">
+Rajasthan History
 </a>
 
 </div>
@@ -1425,169 +862,406 @@ Visit Facebook
 </section>
 
 
-<!-- ================= MODAL ================= -->
-
-<div class="modal" id="modal">
-
-<div class="modal-box">
-
-<button class="close" onclick="closeInfo()">
-×
-</button>
-
-<div id="modalContent"></div>
-
-</div>
-
-</div>
-
-
-<!-- ================= FOOTER ================= -->
-
 <footer>
 
-<div class="footer-logo">
-🌵 Rajasthan Roots
-</div>
-
-<p style="margin-top:10px;">
-पधारो म्हारे राजस्थान ❤️
+<p>
+<strong>RAJASTHAN ROOTS</strong>
 </p>
 
-<div class="footer-links">
+<p>
+राजस्थान की संस्कृति • इतिहास • किले • महल • पर्यटन
+</p>
 
-<a href="#home">Home</a>
-<a href="#cities">Cities</a>
-<a href="#culture">Culture</a>
-<a href="#food">Food</a>
-<a href="#travel">Travel</a>
-<a href="#contact">Contact</a>
-
-</div>
-
-<p class="footer-copy">
-© 2026 Rajasthan Roots • Rajasthan Guide
+<p>
+© 2026 Rajasthan Roots
 </p>
 
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<div class="modal-head">
+
+<img id="modalImage" src="" alt="Rajasthan">
+
+<button class="close" onclick="closeModal()">×</button>
+
+</div>
+
+
+<div class="modal-content">
+
+<h2 id="modalTitle"></h2>
+
+<div id="modalText"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
 
 <script>
 
-const modal =
-document.getElementById("modal");
 
-const modalContent =
-document.getElementById("modalContent");
+const cities = {
 
+jaisalmer:{
 
-function openInfo(type){
+title:"🏜️ जैसलमेर — स्वर्ण नगरी",
 
-let html="";
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Jaisalmer%20Fort.jpg",
 
+text:`
 
-if(type==="desert"){
-
-html=`
-
-<h2>🐪 Thar Desert — थार रेगिस्तान</h2>
-
-<div class="scene" style="height:300px;margin:20px 0;border-radius:20px;">
-
-<div class="scene-sun"></div>
-
-<div class="scene-dune"></div>
-
-<div class="scene-camel">🐪</div>
-
-</div>
+<h3>इतिहास</h3>
 
 <p>
-थार रेगिस्तान राजस्थान के प्राकृतिक landscapes
-का एक महत्वपूर्ण हिस्सा है। सुनहरी रेत,
-camel journeys और desert sunsets यहाँ के
-अनुभव का हिस्सा हैं।
+जैसलमेर की स्थापना 1156 ईस्वी में भाटी शासक रावल जैसल ने की थी।
+जैसलमेर किला पीले बलुआ पत्थर से बना होने के कारण सूर्य की रोशनी में
+स्वर्णिम दिखाई देता है और इसी वजह से इसे सोनार किला भी कहा जाता है।
 </p>
 
-<br>
+<h3>जैसलमेर किला</h3>
 
 <p>
-<b>English:</b>
-Explore the golden desert landscapes,
-camel journeys and beautiful sunsets of Rajasthan.
+जैसलमेर किला राजस्थान के प्रसिद्ध जीवित किलों में से एक है। किले के
+भीतर ऐतिहासिक आवासीय क्षेत्र, मंदिर, हवेलियाँ और बाजार आज भी मौजूद हैं।
 </p>
 
-`;
+<h3>देखने लायक स्थान</h3>
+
+<p>
+पटवों की हवेली • नथमल की हवेली • सलीम सिंह की हवेली • बड़ा बाग •
+गड़ीसर झील • थार रेगिस्तान
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/Jaisalmer+Fort"
+target="_blank">
+📍 Google Maps
+</a>
+
+<a class="btn"
+href="https://commons.wikimedia.org/wiki/Jaisalmer_Fort"
+target="_blank">
+📷 Photos
+</a>
+
+`
+
+},
+
+
+bikaner:{
+
+title:"🐪 बीकानेर — जूनागढ़ और मरु संस्कृति",
+
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Junagarh%20Fort.jpg",
+
+text:`
+
+<h3>इतिहास</h3>
+
+<p>
+बीकानेर की स्थापना राठौड़ शासक राव बीका ने 15वीं शताब्दी में की थी।
+बीकानेर राज्य ने थार क्षेत्र में एक महत्वपूर्ण ऐतिहासिक और व्यापारिक
+केंद्र के रूप में विकास किया।
+</p>
+
+<h3>जूनागढ़ किला</h3>
+
+<p>
+जूनागढ़ किले का निर्माण 16वीं शताब्दी के अंत में राजा राय सिंह के
+समय शुरू हुआ। यह राजस्थान के उन प्रमुख किलों में है जो पहाड़ी की
+चोटी पर नहीं बने हैं।
+</p>
+
+<h3>देखने लायक स्थान</h3>
+
+<p>
+जूनागढ़ किला • लालगढ़ पैलेस • लक्ष्मी निवास पैलेस • रामपुरिया हवेलियाँ •
+देशनोक का करणी माता मंदिर • राष्ट्रीय ऊँट अनुसंधान केंद्र
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/Junagarh+Fort+Bikaner"
+target="_blank">
+📍 Google Maps
+</a>
+
+<a class="btn"
+href="https://commons.wikimedia.org/wiki/Category:Junagarh_Fort"
+target="_blank">
+📷 Photos
+</a>
+
+`
+
+},
+
+
+jodhpur:{
+
+title:"🔵 जोधपुर — ब्लू सिटी",
+
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Mehrangarh%20Fort%20jodhpur.jpg",
+
+text:`
+
+<h3>इतिहास</h3>
+
+<p>
+जोधपुर की स्थापना राठौड़ शासक राव जोधा ने 1459 में की थी। शहर के
+विकास के साथ मेहरानगढ़ दुर्ग एक प्रमुख राजनीतिक और सैन्य केंद्र बना।
+</p>
+
+<h3>मेहरानगढ़ दुर्ग</h3>
+
+<p>
+मेहरानगढ़ दुर्ग एक विशाल पहाड़ी दुर्ग है। इसके भीतर कई महल, आंगन,
+संग्रह और ऐतिहासिक स्थापत्य देखने को मिलते हैं।
+</p>
+
+<h3>देखने लायक स्थान</h3>
+
+<p>
+मेहरानगढ़ दुर्ग • जसवंत थड़ा • उम्मेद भवन पैलेस • मंडोर •
+घंटाघर • सरदार मार्केट
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/Mehrangarh+Fort"
+target="_blank">
+📍 Google Maps
+</a>
+
+<a class="btn"
+href="https://commons.wikimedia.org/wiki/Mehrangarh_Fort"
+target="_blank">
+📷 Photos
+</a>
+
+`
+
+},
+
+
+udaipur:{
+
+title:"🌊 उदयपुर — मेवाड़ की नगरी",
+
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/City%20Palace%20of%20Udaipur.jpg",
+
+text:`
+
+<h3>इतिहास</h3>
+
+<p>
+उदयपुर की स्थापना महाराणा उदय सिंह द्वितीय ने 16वीं शताब्दी में की।
+चित्तौड़ पर हुए संघर्षों के बाद मेवाड़ की राजधानी उदयपुर स्थानांतरित
+की गई और शहर के साथ महलों और झीलों का विकास हुआ।
+</p>
+
+<h3>सिटी पैलेस</h3>
+
+<p>
+उदयपुर का सिटी पैलेस परिसर कई पीढ़ियों के मेवाड़ शासकों के समय
+विकसित हुआ। यह पिछोला झील के किनारे स्थित एक विशाल महल परिसर है।
+</p>
+
+<h3>देखने लायक स्थान</h3>
+
+<p>
+सिटी पैलेस • पिछोला झील • जगदीश मंदिर • सहेलियों की बाड़ी •
+सज्जनगढ़/मॉनसून पैलेस • फतेह सागर झील
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/City+Palace+Udaipur"
+target="_blank">
+📍 Google Maps
+</a>
+
+<a class="btn"
+href="https://commons.wikimedia.org/wiki/City_Palace_(Udaipur)"
+target="_blank">
+📷 Photos
+</a>
+
+`
+
+},
+
+
+barmer:{
+
+title:"🎨 बाड़मेर — मरु कला और इतिहास",
+
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Fort%20of%20Siwana%20-%20Barmer%20-%20Rajasthan%20-%20003.jpg",
+
+text:`
+
+<h3>इतिहास</h3>
+
+<p>
+बाड़मेर क्षेत्र पश्चिमी राजस्थान के थार मरुस्थल का महत्वपूर्ण हिस्सा है।
+यह क्षेत्र अपने लोक जीवन, हस्तशिल्प, वस्त्र कला और ऐतिहासिक स्थलों के
+लिए जाना जाता है।
+</p>
+
+<h3>सिवाना दुर्ग</h3>
+
+<p>
+सिवाना दुर्ग बाड़मेर जिले के सिवाना क्षेत्र में एक पहाड़ी पर स्थित
+ऐतिहासिक दुर्ग है। इसकी स्थिति और दुर्ग-रचना क्षेत्र के सैन्य इतिहास
+से जुड़ी है।
+</p>
+
+<h3>किराडू मंदिर</h3>
+
+<p>
+किराडू मंदिर समूह बाड़मेर से लगभग 35 किलोमीटर दूर स्थित ऐतिहासिक
+स्थल है। यहां के मंदिर अपनी पत्थर की नक्काशी और स्थापत्य के लिए
+विशेष रूप से प्रसिद्ध हैं।
+</p>
+
+<h3>देखने लायक स्थान</h3>
+
+<p>
+किराडू मंदिर • सिवाना दुर्ग • बाड़मेर के हस्तशिल्प क्षेत्र •
+स्थानीय लोक कला और वस्त्र परंपराएँ
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/Kiradu+Temples+Barmer"
+target="_blank">
+📍 Google Maps
+</a>
+
+<a class="btn"
+href="https://commons.wikimedia.org/wiki/Category:Barmer"
+target="_blank">
+📷 Photos
+</a>
+
+`
+
+},
+
+
+kota:{
+
+title:"🏞️ कोटा — हाड़ौती की विरासत",
+
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Garh%20Palace%20kota.jpg",
+
+text:`
+
+<h3>इतिहास</h3>
+
+<p>
+कोटा हाड़ौती क्षेत्र का प्रमुख ऐतिहासिक शहर है। कोटा राज्य का इतिहास
+बूंदी के हाड़ा राजपूतों से जुड़ा हुआ है और बाद में कोटा एक अलग राज्य
+के रूप में विकसित हुआ।
+</p>
+
+<h3>गढ़ पैलेस</h3>
+
+<p>
+कोटा का गढ़ पैलेस एक दुर्गीकृत महल परिसर है और यह कोटा के
+रावों तथा महारावों के ऐतिहासिक निवास से जुड़ा रहा है।
+</p>
+
+<h3>देखने लायक स्थान</h3>
+
+<p>
+गढ़ पैलेस • कोटा बैराज • किशोर सागर • जगमंदिर • चंबल गार्डन
+</p>
+
+<a class="btn"
+href="https://www.google.com/maps/search/Garh+Palace+Kota"
+target="_blank">
+📍 Google Maps
+</a>
+
+<a class="btn"
+href="https://commons.wikimedia.org/wiki/Category:Kota"
+target="_blank">
+📷 Photos
+</a>
+
+`
+
+}
+
+};
+
+
+
+function openCity(city){
+
+const data=cities[city];
+
+if(!data) return;
+
+document.getElementById("modalTitle").innerHTML=data.title;
+
+document.getElementById("modalImage").src=data.image;
+
+document.getElementById("modalText").innerHTML=data.text;
+
+document.getElementById("modal").classList.add("active");
+
+document.body.style.overflow="hidden";
 
 }
 
 
-else if(type==="safa"){
+function closeModal(){
 
-html=`
+document.getElementById("modal").classList.remove("active");
 
-<h2>👳 Rajasthani Safa</h2>
-
-<div class="scene" style="height:300px;margin:20px 0;border-radius:20px;">
-
-<div class="scene-dune"></div>
-
-<div class="safa-top"></div>
-
-<div class="safa-person">🧔</div>
-
-</div>
-
-<p>
-राजस्थानी साफा पारंपरिक पहनावे का एक
-सुंदर हिस्सा है। इसके रंग और पहनने की
-शैली अलग-अलग क्षेत्रों में अलग हो सकती है।
-</p>
-
-<br>
-
-<p>
-<b>English:</b>
-The Rajasthani safa is a colourful part of
-traditional clothing and regional culture.
-</p>
-
-`;
+document.body.style.overflow="auto";
 
 }
 
 
-else if(type==="dalbati"){
+/* बाहर क्लिक करने पर modal बंद */
 
-html=`
+document.getElementById("modal").addEventListener("click",function(e){
 
-<h2>🍛 Dal Baati Churma</h2>
+if(e.target===this){
 
-<div class="scene food-scene"
-style="height:300px;margin:20px 0;border-radius:20px;">
+closeModal();
 
-<div class="plate">
+}
 
-<div class="baati baati1"></div>
-<div class="baati baati2"></div>
-<div class="baati baati3"></div>
+});
 
-<div class="churma"></div>
 
-</div>
+/* ESC key */
 
-</div>
+document.addEventListener("keydown",function(e){
 
-<p>
-दाल बाटी चूरमा राजस्थान के प्रसिद्ध
-पारंपरिक व्यंजनों में से एक है।
-</p>
+if(e.key==="Escape"){
 
-<br>
+closeModal();
 
-<p>
-<b>English:</b>
-Dal Baati Churma is one of the well-known
-traditional dishes assoc
+}
+
+});
+
+</script>
+
+
+</body>
+  </html>
