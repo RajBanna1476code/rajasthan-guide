@@ -4,1200 +4,1590 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rajasthan Roots | रंगीलो राजस्थान</title>
+<title>Rajasthan Roots | राजस्थान की जानकारी</title>
 
 <style>
+
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial, sans-serif;
-  background:#fff7e8;
-  color:#3d2114;
-  overflow-x:hidden;
+font-family:Arial,sans-serif;
+background:#fff8ed;
+color:#3a2117;
+overflow-x:hidden;
 }
 
-/* ================= NAVBAR ================= */
+/* ================= HEADER ================= */
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(61,33,20,.96);
-  backdrop-filter:blur(10px);
-  padding:13px 18px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  box-shadow:0 4px 20px #0003;
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(62,29,18,.97);
+color:white;
+box-shadow:0 5px 25px #0004;
+}
+
+.topbar{
+padding:14px 18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
 }
 
 .logo{
-  color:#ffd166;
-  font-size:20px;
-  font-weight:900;
+font-size:22px;
+font-weight:900;
+color:#ffd166;
 }
 
-.menu{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
+.logo small{
+display:block;
+font-size:10px;
+color:#fff;
+letter-spacing:2px;
+margin-top:3px;
 }
 
-.menu a{
-  color:white;
-  text-decoration:none;
-  padding:7px 10px;
-  border-radius:20px;
-  font-size:13px;
+nav{
+display:flex;
+gap:7px;
+overflow-x:auto;
+padding:0 15px 13px;
+scrollbar-width:none;
 }
 
-.menu a:hover{
-  background:#d96b27;
+nav::-webkit-scrollbar{
+display:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+white-space:nowrap;
+padding:8px 12px;
+border-radius:20px;
+font-size:13px;
+transition:.3s;
+}
+
+nav a:hover{
+background:#d96b27;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-  min-height:650px;
-  position:relative;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:
-    linear-gradient(#e98d42 0%,#f5bb67 48%,#d9843e 49%,#9e522c 100%);
+min-height:650px;
+position:relative;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+
+background:
+linear-gradient(
+180deg,
+#8e3e24 0%,
+#df813d 45%,
+#f2b75c 60%,
+#b55c2e 100%
+);
 }
 
 .sun{
-  position:absolute;
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  background:#ffd166;
-  top:75px;
-  right:13%;
-  box-shadow:0 0 60px #ffd166;
-  animation:sunPulse 4s infinite alternate;
+position:absolute;
+width:125px;
+height:125px;
+border-radius:50%;
+background:#ffe29a;
+right:12%;
+top:75px;
+box-shadow:0 0 60px #ffe29a;
+animation:sun 4s infinite alternate;
 }
 
-@keyframes sunPulse{
-  from{transform:scale(1)}
-  to{transform:scale(1.12)}
+@keyframes sun{
+to{
+transform:scale(1.12);
+box-shadow:0 0 90px #ffe29a;
 }
-
-/* dunes */
+}
 
 .dune{
-  position:absolute;
-  bottom:-100px;
-  width:120%;
-  height:260px;
-  border-radius:50% 50% 0 0;
-  background:#c76f36;
-  transform:rotate(-3deg);
+position:absolute;
+bottom:-120px;
+width:130%;
+height:280px;
+background:#c96e36;
+border-radius:50% 50% 0 0;
+transform:rotate(-3deg);
 }
 
 .dune2{
-  bottom:-150px;
-  background:#a9542e;
-  transform:rotate(4deg);
-}
-
-/* stars */
-
-.spark{
-  position:absolute;
-  color:#fff4bd;
-  animation:float 4s infinite ease-in-out;
-}
-
-.s1{top:18%;left:15%}
-.s2{top:30%;left:80%;animation-delay:1s}
-.s3{top:12%;left:55%;animation-delay:2s}
-.s4{top:40%;left:8%;animation-delay:3s}
-
-@keyframes float{
-  0%,100%{transform:translateY(0);opacity:.5}
-  50%{transform:translateY(-18px);opacity:1}
+bottom:-180px;
+background:#9d4b2a;
+transform:rotate(4deg);
 }
 
 .hero-content{
-  z-index:10;
-  max-width:800px;
-  padding:25px;
-  color:white;
-  animation:heroIn 1.2s ease;
+position:relative;
+z-index:5;
+max-width:850px;
+padding:25px;
+animation:heroIn 1.2s ease;
 }
 
 @keyframes heroIn{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .hero h1{
-  font-size:clamp(42px,9vw,85px);
-  font-weight:900;
-  text-shadow:4px 5px 0 #5d2919;
+font-size:clamp(43px,9vw,82px);
+text-shadow:4px 5px 0 #542515;
+margin:12px 0;
 }
 
 .hero h2{
-  color:#ffe29a;
-  margin:10px 0;
+color:#ffe29a;
+font-size:clamp(18px,4vw,28px);
 }
 
 .hero p{
-  font-size:17px;
-  line-height:1.7;
+font-size:17px;
+line-height:1.8;
+margin-top:15px;
 }
 
-.welcome{
-  margin-top:25px;
-  display:inline-block;
-  padding:14px 25px;
-  background:#fff;
-  color:#8c3e20;
-  border-radius:40px;
-  font-weight:bold;
-  animation:bounce 2s infinite;
+.hero-button{
+display:inline-block;
+margin-top:25px;
+padding:15px 28px;
+background:#ffd166;
+color:#432113;
+text-decoration:none;
+font-weight:bold;
+border-radius:40px;
+box-shadow:0 8px 25px #0003;
+animation:bounce 2s infinite;
 }
 
 @keyframes bounce{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-7px)}
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-7px);
+}
 }
 
 /* CAMEL */
 
 .camel{
-  position:absolute;
-  bottom:110px;
-  left:-160px;
-  font-size:80px;
-  z-index:5;
-  animation:camelWalk 18s linear infinite;
+position:absolute;
+z-index:4;
+font-size:78px;
+bottom:105px;
+left:-180px;
+animation:camel 17s linear infinite;
 }
 
-@keyframes camelWalk{
-  from{left:-180px}
-  to{left:110%}
+@keyframes camel{
+from{
+left:-180px;
+}
+to{
+left:110%;
+}
+}
+
+/* floating stars */
+
+.star{
+position:absolute;
+color:#fff2bd;
+font-size:25px;
+animation:star 4s infinite ease-in-out;
+}
+
+.star1{
+top:20%;
+left:12%;
+}
+
+.star2{
+top:30%;
+right:20%;
+animation-delay:1s;
+}
+
+.star3{
+top:15%;
+left:50%;
+animation-delay:2s;
+}
+
+@keyframes star{
+50%{
+transform:translateY(-15px) scale(1.2);
+opacity:.6;
+}
 }
 
 /* ================= SECTION ================= */
 
-section{
-  padding:70px 18px;
-  max-width:1200px;
-  margin:auto;
+.section{
+padding:70px 18px;
+max-width:1150px;
+margin:auto;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:40px;
+text-align:center;
+margin-bottom:40px;
 }
 
 .section-title h2{
-  font-size:35px;
-  color:#8b3f20;
+font-size:34px;
+color:#8b3f20;
 }
 
 .section-title p{
-  margin-top:8px;
-  color:#795548;
+margin-top:8px;
+color:#75594c;
 }
 
 /* ================= CARDS ================= */
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
 }
 
 .card{
-  background:white;
-  border-radius:22px;
-  padding:25px;
-  cursor:pointer;
-  box-shadow:0 8px 25px #5d29191c;
-  border:2px solid #f0c58d;
-  transition:.35s;
-  position:relative;
-  overflow:hidden;
+background:white;
+border-radius:24px;
+padding:24px;
+border:2px solid #f0c994;
+box-shadow:0 10px 30px #6c3c1b18;
+cursor:pointer;
+transition:.35s;
+position:relative;
+overflow:hidden;
+}
+
+.card:before{
+content:"";
+position:absolute;
+width:100px;
+height:100px;
+border-radius:50%;
+background:#ffd16630;
+right:-35px;
+top:-35px;
 }
 
 .card:hover{
-  transform:translateY(-9px) scale(1.02);
-  box-shadow:0 15px 35px #5d291940;
+transform:translateY(-9px);
+box-shadow:0 18px 40px #6c3c1b30;
 }
 
-.card-icon{
-  font-size:55px;
-  margin-bottom:12px;
-  display:inline-block;
-  animation:iconFloat 3s infinite;
+.icon{
+font-size:58px;
+display:inline-block;
+animation:icon 3s infinite ease-in-out;
 }
 
-@keyframes iconFloat{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-8px)}
+@keyframes icon{
+50%{
+transform:translateY(-8px) rotate(3deg);
+}
 }
 
 .card h3{
-  color:#8c3e20;
-  margin-bottom:8px;
+margin:13px 0 8px;
+font-size:22px;
+color:#8b3f20;
 }
 
 .card p{
-  color:#6d5145;
-  line-height:1.6;
+line-height:1.7;
+color:#665147;
 }
 
 .click{
-  display:inline-block;
-  margin-top:15px;
-  background:#d96b27;
-  color:white;
-  padding:7px 13px;
-  border-radius:20px;
-  font-size:12px;
+display:inline-block;
+margin-top:15px;
+background:#d96b27;
+color:white;
+padding:8px 14px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
 }
 
-/* ================= ANIMATION REELS ================= */
+/* ================= ANIMATION AREA ================= */
 
-.reels{
-  background:#3d2114;
-  color:white;
-  max-width:none;
+.animation-section{
+background:#3c2117;
+max-width:none;
+color:white;
 }
 
-.reels-inner{
-  max-width:1200px;
-  margin:auto;
+.animation-inner{
+max-width:1150px;
+margin:auto;
 }
 
-.reel-card{
-  background:#5a3020;
-  border-radius:24px;
-  overflow:hidden;
-  cursor:pointer;
-  border:1px solid #a86543;
-  transition:.3s;
+.animation-inner .section-title h2{
+color:#ffd166;
 }
 
-.reel-card:hover{
-  transform:scale(1.025);
+.animation-inner .section-title p{
+color:#e5c5ad;
+}
+
+.animation-card{
+background:#542e20;
+border:1px solid #87513a;
+border-radius:25px;
+overflow:hidden;
+cursor:pointer;
+transition:.3s;
+}
+
+.animation-card:hover{
+transform:scale(1.025);
 }
 
 .scene{
-  height:230px;
-  position:relative;
-  overflow:hidden;
-  background:linear-gradient(#efad58,#d87a35);
+height:230px;
+position:relative;
+overflow:hidden;
+background:linear-gradient(#e89b50,#c96935);
 }
 
-/* Mini desert */
-
-.mini-sun{
-  position:absolute;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  background:#ffe082;
-  top:30px;
-  right:30px;
-  box-shadow:0 0 30px #ffe082;
+.scene-sun{
+position:absolute;
+width:65px;
+height:65px;
+background:#ffe29a;
+border-radius:50%;
+right:30px;
+top:25px;
+box-shadow:0 0 40px #ffe29a;
+animation:sun 3s infinite alternate;
 }
 
-.mini-dune{
-  position:absolute;
-  width:120%;
-  height:100px;
-  bottom:-35px;
-  left:-10%;
-  background:#ad552d;
-  border-radius:50%;
-  animation:duneMove 5s infinite alternate;
+.scene-dune{
+position:absolute;
+width:130%;
+height:120px;
+bottom:-45px;
+left:-15%;
+border-radius:50%;
+background:#a9522d;
+animation:dunes 5s infinite alternate;
 }
 
-@keyframes duneMove{
-  from{transform:translateX(-15px)}
-  to{transform:translateX(15px)}
+@keyframes dunes{
+from{
+transform:translateX(-15px);
+}
+to{
+transform:translateX(15px);
+}
 }
 
-.mini-camel{
-  position:absolute;
-  bottom:65px;
-  left:-100px;
-  font-size:58px;
-  animation:miniCamel 8s linear infinite;
+.scene-camel{
+position:absolute;
+font-size:60px;
+bottom:55px;
+left:-100px;
+animation:miniCamel 8s linear infinite;
 }
 
 @keyframes miniCamel{
-  to{left:110%}
+to{
+left:110%;
+}
 }
 
-/* Character */
+/* safa person */
 
-.person{
-  position:absolute;
-  bottom:50px;
-  left:50%;
-  transform:translateX(-50%);
-  font-size:70px;
-  animation:personMove 2s infinite alternate;
+.safa-person{
+position:absolute;
+font-size:72px;
+bottom:38px;
+left:50%;
+transform:translateX(-50%);
+animation:walk 1.5s infinite alternate;
 }
 
-@keyframes personMove{
-  from{transform:translateX(-50%) rotate(-2deg)}
-  to{transform:translateX(-50%) rotate(2deg)}
+@keyframes walk{
+to{
+transform:translateX(-50%) rotate(4deg);
+}
 }
 
-.safa{
-  position:absolute;
-  top:55px;
-  left:50%;
-  transform:translateX(-50%);
-  background:#e63946;
-  width:55px;
-  height:22px;
-  border-radius:50%;
-  animation:safaWave 1.5s infinite alternate;
+.safa-top{
+position:absolute;
+width:65px;
+height:25px;
+background:#d62828;
+border-radius:50%;
+top:57px;
+left:50%;
+transform:translateX(-50%);
+animation:safa 1s infinite alternate;
 }
 
-@keyframes safaWave{
-  to{transform:translateX(-50%) rotate(5deg)}
+@keyframes safa{
+to{
+transform:translateX(-50%) rotate(7deg);
+}
 }
 
-/* FOOD */
+/* food animation */
 
 .food-scene{
-  background:linear-gradient(#ffe0a3,#f3ad57);
+background:linear-gradient(#f5c16e,#e68b42);
 }
 
 .plate{
-  position:absolute;
-  width:170px;
-  height:70px;
-  background:#fff;
-  border-radius:50%;
-  left:50%;
-  top:55%;
-  transform:translate(-50%,-50%);
-  box-shadow:0 10px 20px #0003;
+position:absolute;
+width:180px;
+height:75px;
+background:white;
+border-radius:50%;
+left:50%;
+top:55%;
+transform:translate(-50%,-50%);
+box-shadow:0 12px 25px #0004;
 }
 
 .baati{
-  position:absolute;
-  width:34px;
-  height:34px;
-  background:#b8652d;
-  border-radius:50%;
-  top:18px;
-  animation:foodBounce 2s infinite alternate;
+position:absolute;
+width:35px;
+height:35px;
+border-radius:50%;
+background:#a9572c;
+top:18px;
+animation:baati 1.5s infinite alternate;
 }
 
-.b1{left:28px}
-.b2{left:70px;animation-delay:.3s}
-.b3{left:112px;animation-delay:.6s}
+.baati1{
+left:25px;
+}
+
+.baati2{
+left:73px;
+animation-delay:.3s;
+}
+
+.baati3{
+left:120px;
+animation-delay:.6s;
+}
+
+@keyframes baati{
+to{
+transform:translateY(-9px);
+}
+}
 
 .churma{
-  position:absolute;
-  width:30px;
-  height:25px;
-  background:#e5a03c;
-  border-radius:50%;
-  right:25px;
-  top:23px;
+position:absolute;
+right:25px;
+top:25px;
+width:30px;
+height:25px;
+border-radius:50%;
+background:#e2a13a;
 }
 
-@keyframes foodBounce{
-  to{transform:translateY(-8px)}
-}
-
-.spoon{
-  position:absolute;
-  width:7px;
-  height:100px;
-  background:#777;
-  right:80px;
-  top:15px;
-  transform:rotate(35deg);
-  animation:spoonMove 2s infinite alternate;
-}
-
-@keyframes spoonMove{
-  to{transform:rotate(55deg) translateY(8px)}
-}
-
-/* FORT */
-
-.fort-scene{
-  background:linear-gradient(#e99c51,#d77b38);
-}
+/* fort */
 
 .fort{
-  position:absolute;
-  bottom:30px;
-  left:50%;
-  transform:translateX(-50%);
-  font-size:110px;
-  animation:fortGlow 3s infinite alternate;
+position:absolute;
+font-size:110px;
+left:50%;
+bottom:25px;
+transform:translateX(-50%);
+animation:fort 3s infinite alternate;
 }
 
-@keyframes fortGlow{
-  from{filter:brightness(.9)}
-  to{filter:brightness(1.15)}
+@keyframes fort{
+to{
+filter:brightness(1.25);
+transform:translateX(-50%) scale(1.03);
+}
 }
 
-/* dance */
+/* folk */
 
-.dance-scene{
-  background:radial-gradient(circle,#c75b38,#542b20);
+.folk-scene{
+background:radial-gradient(circle,#b95035,#3d2117);
 }
 
 .dancer{
-  position:absolute;
-  font-size:75px;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  animation:dance 1s infinite alternate;
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+font-size:85px;
+animation:dance 1s infinite alternate;
 }
 
 @keyframes dance{
-  from{transform:translate(-50%,-50%) rotate(-8deg)}
-  to{transform:translate(-50%,-50%) rotate(8deg) scale(1.05)}
+from{
+transform:translate(-50%,-50%) rotate(-9deg);
+}
+to{
+transform:translate(-50%,-50%) rotate(9deg) scale(1.08);
+}
 }
 
-.reel-info{
-  padding:18px;
+.animation-info{
+padding:18px;
 }
 
-.reel-info h3{
-  color:#ffd166;
-  margin-bottom:5px;
+.animation-info h3{
+color:#ffd166;
+margin-bottom:7px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-wrap{
+background:linear-gradient(135deg,#ffe9bd,#ffd18b);
+border-radius:30px;
+padding:35px 20px;
+text-align:center;
+box-shadow:0 10px 30px #6c3c1b18;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+gap:16px;
+margin-top:25px;
+}
+
+.contact-card{
+background:white;
+border-radius:20px;
+padding:23px;
+transition:.3s;
+}
+
+.contact-card:hover{
+transform:translateY(-5px);
+}
+
+.contact-icon{
+font-size:40px;
+}
+
+.contact-card h3{
+margin:10px 0;
+color:#8b3f20;
+}
+
+.contact-card a{
+color:#a44700;
+font-weight:bold;
+text-decoration:none;
+word-break:break-word;
 }
 
 /* ================= MODAL ================= */
 
 .modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:3000;
-  background:#180c08eF;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+display:none;
+position:fixed;
+z-index:3000;
+inset:0;
+background:#180c08ee;
+align-items:center;
+justify-content:center;
+padding:18px;
 }
 
 .modal-box{
-  width:min(850px,100%);
-  max-height:90vh;
-  overflow:auto;
-  background:#fff8ec;
-  border-radius:25px;
-  padding:25px;
-  position:relative;
-  animation:modalIn .35s ease;
+width:min(850px,100%);
+max-height:92vh;
+overflow:auto;
+background:#fff8ed;
+border-radius:28px;
+padding:25px;
+position:relative;
+animation:modal .3s ease;
 }
 
-@keyframes modalIn{
-  from{transform:scale(.8);opacity:0}
-  to{transform:scale(1);opacity:1}
+@keyframes modal{
+from{
+transform:scale(.8);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
 }
 
 .close{
-  position:absolute;
-  right:18px;
-  top:15px;
-  width:40px;
-  height:40px;
-  border:0;
-  border-radius:50%;
-  background:#8c3e20;
-  color:white;
-  font-size:22px;
-  cursor:pointer;
+position:absolute;
+right:15px;
+top:15px;
+width:42px;
+height:42px;
+border:0;
+border-radius:50%;
+background:#8b3f20;
+color:white;
+font-size:24px;
+cursor:pointer;
 }
 
 .modal h2{
-  color:#8c3e20;
-  margin-bottom:12px;
+color:#8b3f20;
+margin-bottom:15px;
+padding-right:45px;
 }
 
 .modal p{
-  line-height:1.8;
-  color:#5c463b;
-}
-
-.big-animation{
-  height:280px;
-  margin:20px 0;
-  border-radius:20px;
-  overflow:hidden;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-  background:#f0d19c;
-  border-radius:30px;
-  text-align:center;
-}
-
-.contact-box{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-  margin-top:25px;
-}
-
-.contact-item{
-  background:white;
-  padding:20px;
-  border-radius:18px;
-}
-
-.contact-item a{
-  color:#8c3e20;
-  font-weight:bold;
-  text-decoration:none;
+line-height:1.8;
+color:#5d493e;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-  background:#3d2114;
-  color:white;
-  text-align:center;
-  padding:30px 15px;
+background:#24140d;
+color:white;
+padding:40px 18px;
+text-align:center;
 }
 
-.footer-title{
-  color:#ffd166;
-  font-size:24px;
-  font-weight:bold;
+.footer-logo{
+font-size:27px;
+font-weight:bold;
+color:#ffd166;
 }
 
-/* mobile */
+.footer-links{
+margin:20px 0;
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.footer-links a{
+color:white;
+text-decoration:none;
+padding:9px 14px;
+background:#ffffff12;
+border-radius:20px;
+}
+
+.footer-copy{
+color:#cdb4a5;
+font-size:13px;
+margin-top:15px;
+}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:650px){
-  .menu{
-    display:none;
-  }
 
-  .hero{
-    min-height:570px;
-  }
-
-  .hero h1{
-    font-size:47px;
-  }
-
-  .hero p{
-    font-size:15px;
-  }
-
-  .camel{
-    font-size:60px;
-    bottom:100px;
-  }
-
-  section{
-    padding:55px 15px;
-  }
+.topbar{
+display:block;
 }
+
+.logo{
+margin-bottom:10px;
+}
+
+.hero{
+min-height:590px;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.camel{
+font-size:60px;
+bottom:100px;
+}
+
+.section{
+padding:55px 15px;
+}
+
+.section-title h2{
+font-size:27px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.animation-card{
+width:100%;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="topbar">
+
+<div class="logo">
+🌵 Rajasthan Roots
+<small>THE COLOURFUL RAJASTHAN</small>
+</div>
+
+</div>
 
 <nav>
-  <div class="logo">🌵 Rajasthan Roots</div>
 
-  <div class="menu">
-    <a href="#home">Home</a>
-    <a href="#culture">Culture</a>
-    <a href="#food">Food</a>
-    <a href="#reels">Animations</a>
-    <a href="#travel">Travel</a>
-    <a href="#contact">Contact</a>
-  </div>
+<a href="#home">Home</a>
+<a href="#cities">Cities</a>
+<a href="#culture">Culture</a>
+<a href="#food">Food</a>
+<a href="#travel">Travel</a>
+<a href="#animations">Animations</a>
+<a href="#contact">Contact</a>
+
 </nav>
-
-
-<!-- HERO -->
-
-<header class="hero" id="home">
-
-  <div class="sun"></div>
-
-  <div class="spark s1">✦</div>
-  <div class="spark s2">✦</div>
-  <div class="spark s3">✧</div>
-  <div class="spark s4">✦</div>
-
-  <div class="dune"></div>
-  <div class="dune dune2"></div>
-
-  <div class="camel">🐪</div>
-
-  <div class="hero-content">
-
-    <h1>राजस्थान</h1>
-
-    <h2>RAJASTHAN — The Land of Colours</h2>
-
-    <p>
-      पधारो म्हारे राजस्थान ❤️
-      <br>
-      Discover the culture, food, desert,
-      people and royal spirit of Rajasthan.
-    </p>
-
-    <div class="welcome">
-      ✨ Explore Rajasthan
-    </div>
-
-  </div>
 
 </header>
 
 
-<!-- CULTURE -->
+<!-- ================= HERO ================= -->
 
-<section id="culture">
+<section class="hero" id="home">
 
-  <div class="section-title">
-    <h2>🏜️ राजस्थान की संस्कृति</h2>
-    <p>Rajasthan Culture & Heritage</p>
-  </div>
+<div class="sun"></div>
 
-  <div class="grid">
+<div class="star star1">✦</div>
+<div class="star star2">✦</div>
+<div class="star star3">✧</div>
 
-    <div class="card" onclick="openModal('safa')">
-      <div class="card-icon">👳</div>
-      <h3>साफा संस्कृति</h3>
-      <p>Rajasthani Safa और पारंपरिक पहनावा।</p>
-      <span class="click">देखें Animation →</span>
-    </div>
+<div class="dune"></div>
+<div class="dune dune2"></div>
 
-    <div class="card" onclick="openModal('folk')">
-      <div class="card-icon">💃</div>
-      <h3>लोक संस्कृति</h3>
-      <p>लोक नृत्य, संगीत और रंगीन परंपराएँ।</p>
-      <span class="click">Open →</span>
-    </div>
+<div class="camel">🐪</div>
 
-    <div class="card" onclick="openModal('desert')">
-      <div class="card-icon">🐪</div>
-      <h3>थार रेगिस्तान</h3>
-      <p>Golden sand dunes और camel journey.</p>
-      <span class="click">Explore →</span>
-    </div>
+<div class="hero-content">
 
-    <div class="card" onclick="openModal('fort')">
-      <div class="card-icon">🏰</div>
-      <h3>राजस्थानी किले</h3>
-      <p>राजस्थान की ऐतिहासिक architecture.</p>
-      <span class="click">देखें →</span>
-    </div>
+<div style="font-size:42px;">
+❤️ पधारो म्हारे राजस्थान
+</div>
 
-  </div>
+<h1>राजस्थान</h1>
+
+<h2>RAJASTHAN — The Land of Colours</h2>
+
+<p>
+राजस्थान के शहर, संस्कृति, खाना, रेगिस्तान,
+किले और घूमने की जगहों को एक ही जगह explore करें।
+</p>
+
+<a href="#cities" class="hero-button">
+✨ Explore Rajasthan
+</a>
+
+</div>
 
 </section>
+
+
+<!-- ================= CITIES ================= -->
+
+<section class="section" id="cities">
+
+<div class="section-title">
+
+<h2>📍 राजस्थान के शहर</h2>
+
+<p>Discover the colours and stories of Rajasthan</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card" onclick="openInfo('jaipur')">
+
+<div class="icon">🏯</div>
+
+<h3>जयपुर</h3>
+
+<p>
+Pink City — heritage, palaces और colourful markets.
+</p>
+
+<span class="click">
+Explore Jaipur →
+</span>
+
+</div>
+
+
+<div class="card" onclick="openInfo('jaisalmer')">
+
+<div class="icon">🏜️</div>
+
+<h3>जैसलमेर</h3>
+
+<p>
+Golden City — desert, fort और sunset experiences.
+</p>
+
+<span class="click">
+Explore Jaisalmer →
+</span>
+
+</div>
+
+
+<div class="card" onclick="openInfo('bikaner')">
+
+<div class="icon">🐪</div>
+
+<h3>बीकानेर</h3>
+
+<p>
+Desert city, heritage, local food और culture.
+</p>
+
+<span class="click">
+Explore Bikaner →
+</span>
+
+</div>
+
+
+<div class="card" onclick="openInfo('jodhpur')">
+
+<div class="icon">💙</div>
+
+<h3>जोधपुर</h3>
+
+<p>
+Blue City — historic streets और शानदार heritage.
+</p>
+
+<span class="click">
+Explore Jodhpur →
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CULTURE ================= -->
+
+<section class="section" id="culture">
+
+<div class="section-title">
+
+<h2>👳 Rajasthan Culture</h2>
+
+<p>Tradition • People • Music • Heritage</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card" onclick="openInfo('safa')">
+
+<div class="icon">👳</div>
+
+<h3>राजस्थानी साफा</h3>
+
+<p>
+रंग-बिरंगे साफे और पारंपरिक पहनावे की झलक।
+</p>
+
+<span class="click">
+Animation देखें →
+</span>
+
+</div>
+
+
+<div class="card" onclick="openInfo('folk')">
+
+<div class="icon">💃</div>
+
+<h3>लोक संस्कृति</h3>
+
+<p>
+लोक नृत्य, संगीत और राजस्थान की रंगीन परंपराएँ।
+</p>
+
+<span class="click">
+Open Animation →
+</span>
+
+</div>
+
+
+<div class="card" onclick="openInfo('desert')">
+
+<div class="icon">🐪</div>
+
+<h3>थार रेगिस्तान</h3>
+
+<p>
+Golden dunes, camel journey और desert sunset.
+</p>
+
+<span class="click">
+Explore →
+</span>
+
+</div>
+
+
+<div class="card" onclick="openInfo('fort')">
+
+<div class="icon">🏰</div>
+
+<h3>किले और विरासत</h3>
+
+<p>
+राजस्थान के historic forts और architecture.
+</p>
+
+<span class="click">
+देखें →
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOD ================= -->
+
+<section class="section" id="food">
+
+<div class="section-title">
+
+<h2>🍛 Rajasthani Food</h2>
+
+<p>राजस्थान का स्वाद</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card" onclick="openInfo('dalbati')">
+
+<div class="icon">🍛</div>
+
+<h3>दाल बाटी चूरमा</h3>
+
+<p>
+राजस्थान के प्रसिद्ध पारंपरिक व्यंजनों में से एक।
+</p>
+
+<span class="click">
+Food Animation →
+</span>
+
+</div>
+
+
+<div class="card" onclick="openInfo('kachori')">
+
+<div class="icon">🥟</div>
+
+<h3>प्याज़ कचौरी</h3>
+
+<p>
+राजस्थानी स्वाद वाली लोकप्रिय कचौरी।
+</p>
+
+<span class="click">
+Explore →
+</span>
+
+</div>
+
+
+<div class="card" onclick="openInfo('gatte')">
+
+<div class="icon">🍲</div>
+
+<h3>गट्टे की सब्जी</h3>
+
+<p>
+राजस्थान के traditional food की खास dish.
+</p>
+
+<span class="click">
+Explore →
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ANIMATIONS ================= -->
+
+<section class="section animation-section" id="animations">
+
+<div class="animation-inner">
+
+<div class="section-title">
+
+<h2>🎬 Rajasthan Animated World</h2>
+
+<p>
+किसी भी scene पर click करें और animation बड़ी screen में देखें।
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<!-- DESERT -->
+
+<div class="animation-card" onclick="openInfo('desert')">
+
+<div class="scene">
+
+<div class="scene-sun"></div>
+
+<div class="scene-dune"></div>
+
+<div class="scene-camel">🐪</div>
+
+</div>
+
+<div class="animation-info">
+
+<h3>🐪 Thar Desert Journey</h3>
+
+<p>
+रेगिस्तान में camel journey
+</p>
+
+</div>
+
+</div>
+
+
+<!-- SAFA -->
+
+<div class="animation-card" onclick="openInfo('safa')">
+
+<div class="scene">
+
+<div class="scene-dune"></div>
+
+<div class="safa-top"></div>
+
+<div class="safa-person">🧔</div>
+
+</div>
+
+<div class="animation-info">
+
+<h3>👳 Rajasthani Safa</h3>
+
+<p>
+Traditional Rajasthan style
+</p>
+
+</div>
+
+</div>
 
 
 <!-- FOOD -->
 
-<section id="food">
+<div class="animation-card" onclick="openInfo('dalbati')">
 
-  <div class="section-title">
-    <h2>🍛 राजस्थानी खाना</h2>
-    <p>Traditional Rajasthani Food</p>
-  </div>
+<div class="scene food-scene">
 
-  <div class="grid">
+<div class="plate">
 
-    <div class="card" onclick="openModal('dalbati')">
-      <div class="card-icon">🍛</div>
-      <h3>दाल बाटी चूरमा</h3>
-      <p>राजस्थान के लोकप्रिय पारंपरिक व्यंजनों में से एक।</p>
-      <span class="click">Food Animation →</span>
-    </div>
+<div class="baati baati1"></div>
 
-    <div class="card" onclick="openModal('kachori')">
-      <div class="card-icon">🥟</div>
-      <h3>प्याज़ कचौरी</h3>
-      <p>राजस्थानी स्वाद की प्रसिद्ध कचौरी।</p>
-      <span class="click">Open →</span>
-    </div>
+<div class="baati baati2"></div>
 
-    <div class="card" onclick="openModal('gatte')">
-      <div class="card-icon">🍲</div>
-      <h3>गट्टे की सब्जी</h3>
-      <p>Rajasthani traditional curry.</p>
-      <span class="click">Explore →</span>
-    </div>
+<div class="baati baati3"></div>
 
-  </div>
+<div class="churma"></div>
 
-</section>
+</div>
+
+</div>
+
+<div class="animation-info">
+
+<h3>🍛 Dal Baati Churma</h3>
+
+<p>
+Traditional food animation
+</p>
+
+</div>
+
+</div>
 
 
-<!-- ANIMATED REELS -->
+<!-- FORT -->
 
-<section class="reels" id="reels">
+<div class="animation-card" onclick="openInfo('fort')">
 
-<div class="reels-inner">
+<div class="scene">
 
-  <div class="section-title">
-    <h2 style="color:#ffd166">🎬 Rajasthan Mini Animations</h2>
-    <p style="color:#ffe4bf">
-      Click any scene — animation opens in large view.
-    </p>
-  </div>
+<div class="scene-sun"></div>
 
-  <div class="grid">
+<div class="fort">
+🏰
+</div>
 
-    <!-- DESERT -->
+</div>
 
-    <div class="reel-card" onclick="openModal('desert')">
+<div class="animation-info">
 
-      <div class="scene">
+<h3>🏰 Royal Rajasthan</h3>
 
-        <div class="mini-sun"></div>
+<p>
+Fort & heritage animation
+</p>
 
-        <div class="mini-dune"></div>
+</div>
 
-        <div class="mini-camel">🐪</div>
-
-      </div>
-
-      <div class="reel-info">
-        <h3>🐪 Thar Desert Walk</h3>
-        <p>सुनहरी रेत में राजस्थान की यात्रा</p>
-      </div>
-
-    </div>
+</div>
 
 
-    <!-- SAFA -->
+<!-- FOLK -->
 
-    <div class="reel-card" onclick="openModal('safa')">
+<div class="animation-card" onclick="openInfo('folk')">
 
-      <div class="scene">
+<div class="scene folk-scene">
 
-        <div class="mini-dune"></div>
+<div class="dancer">
+💃
+</div>
 
-        <div class="safa"></div>
+</div>
 
-        <div class="person">🧔</div>
+<div class="animation-info">
 
-      </div>
+<h3>💃 Folk Culture</h3>
 
-      <div class="reel-info">
-        <h3>👳 Rajasthani Safa</h3>
-        <p>Traditional Rajasthan style</p>
-      </div>
+<p>
+Colourful Rajasthan
+</p>
 
-    </div>
+</div>
 
-
-    <!-- FOOD -->
-
-    <div class="reel-card" onclick="openModal('dalbati')">
-
-      <div class="scene food-scene">
-
-        <div class="plate">
-
-          <div class="baati b1"></div>
-          <div class="baati b2"></div>
-          <div class="baati b3"></div>
-
-          <div class="churma"></div>
-
-        </div>
-
-        <div class="spoon"></div>
-
-      </div>
-
-      <div class="reel-info">
-        <h3>🍛 Dal Baati Churma</h3>
-        <p>Animated traditional food scene</p>
-      </div>
-
-    </div>
+</div>
 
 
-    <!-- FORT -->
-
-    <div class="reel-card" onclick="openModal('fort')">
-
-      <div class="scene fort-scene">
-
-        <div class="mini-sun"></div>
-
-        <div class="fort">🏰</div>
-
-      </div>
-
-      <div class="reel-info">
-        <h3>🏰 Royal Rajasthan</h3>
-        <p>Fort & royal heritage animation</p>
-      </div>
-
-    </div>
-
-
-    <!-- DANCE -->
-
-    <div class="reel-card" onclick="openModal('folk')">
-
-      <div class="scene dance-scene">
-
-        <div class="dancer">💃</div>
-
-      </div>
-
-      <div class="reel-info">
-        <h3>💃 Folk Culture</h3>
-        <p>Rajasthan's colourful traditions</p>
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </div>
 
 </section>
 
 
-<!-- TRAVEL -->
+<!-- ================= TRAVEL ================= -->
 
-<section id="travel">
+<section class="section" id="travel">
 
-  <div class="section-title">
+<div class="section-title">
 
-    <h2>📍 Rajasthan Travel</h2>
+<h2>🧳 Rajasthan Travel</h2>
 
-    <p>Explore beautiful destinations</p>
+<p>Explore Rajasthan</p>
 
-  </div>
-
-  <div class="grid">
-
-    <div class="card" onclick="openModal('bikaner')">
-      <div class="card-icon">🐪</div>
-      <h3>बीकानेर</h3>
-      <p>Desert city, forts, food and culture.</p>
-      <span class="click">Explore Bikaner →</span>
-    </div>
-
-    <div class="card" onclick="openModal('jaisalmer')">
-      <div class="card-icon">🏜️</div>
-      <h3>जैसलमेर</h3>
-      <p>Golden city और desert experience.</p>
-      <span class="click">Explore →</span>
-    </div>
-
-    <div class="card" onclick="openModal('jaipur')">
-      <div class="card-icon">🏯</div>
-      <h3>जयपुर</h3>
-      <p>Pink City और royal architecture.</p>
-      <span class="click">Explore →</span>
-    </div>
-
-    <div class="card" onclick="openModal('jodhpur')">
-      <div class="card-icon">💙</div>
-      <h3>जोधपुर</h3>
-      <p>Blue City और शानदार heritage.</p>
-      <span class="click">Explore →</span>
-    </div>
-
-  </div>
-
-</section>
+</div>
 
 
-<!-- CONTACT -->
+<div class="grid">
 
-<section id="contact">
 
-  <div class="contact">
+<div class="card" onclick="openInfo('desert')">
 
-    <div class="section-title">
+<div class="icon">🏜️</div>
 
-      <h2>📞 Contact Us</h2>
+<h3>Desert</h3>
 
-      <p>Rajasthan से जुड़ें</p>
+<p>
+Golden dunes और Rajasthan का desert experience.
+</p>
 
-    </div>
+<span class="click">
+Explore →
+</span>
 
-    <div class="contact-box">
+</div>
 
-      <div class="contact-item">
-        📧
-        <br><br>
-        <strong>Email</strong>
-        <br><br>
-        <a href="mailto:vilogs07@gmail.com">
-          vilogs07@gmail.com
-        </a>
-      </div>
 
-      <div class="contact-item">
-        📱
-        <br><br>
-        <strong>Mobile</strong>
-        <br><br>
-        <a href="tel:+918949155790">
-          +91 8949155790
-        </a>
-      </div>
+<div class="card" onclick="openInfo('fort')">
 
-      <div class="contact-item">
-        📸
-        <br><br>
-        <strong>Instagram</strong>
-        <br><br>
-        <a href="https://instagram.com/shiva_banna_shekhawat"
-           target="_blank">
-          @shiva_banna_shekhawat
-        </a>
-      </div>
+<div class="icon">🏰</div>
 
-    </div>
+<h3>Forts</h3>
 
-  </div>
+<p>
+Historic forts और royal architecture.
+</p>
+
+<span class="click">
+Explore →
+</span>
+
+</div>
+
+
+<div class="card" onclick="openInfo('travel')">
+
+<div class="icon">🚗</div>
+
+<h3>Travel Guide</h3>
+
+<p>
+Rajasthan trip planning और travel information.
+</p>
+
+<span class="click">
+Open Guide →
+</span>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- MODAL -->
+<!-- ================= CONTACT ================= -->
+
+<section class="section" id="contact">
+
+<div class="contact-wrap">
+
+<div class="section-title">
+
+<h2>📞 Connect With Us</h2>
+
+<p>
+Rajasthan से जुड़ें और हमसे संपर्क करें
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<!-- EMAIL -->
+
+<div class="contact-card">
+
+<div class="contact-icon">
+📧
+</div>
+
+<h3>Email</h3>
+
+<a href="mailto:vilogs07@gmail.com">
+vilogs07@gmail.com
+</a>
+
+</div>
+
+
+<!-- MOBILE -->
+
+<div class="contact-card">
+
+<div class="contact-icon">
+📱
+</div>
+
+<h3>Mobile</h3>
+
+<a href="tel:+918949155790">
++91 8949155790
+</a>
+
+</div>
+
+
+<!-- INSTAGRAM -->
+
+<div class="contact-card">
+
+<div class="contact-icon">
+📸
+</div>
+
+<h3>Instagram</h3>
+
+<a
+href="https://instagram.com/shiva_banna_shekhawat"
+target="_blank"
+rel="noopener"
+>
+@shiva_banna_shekhawat
+</a>
+
+</div>
+
+
+<!-- FACEBOOK -->
+
+<div class="contact-card">
+
+<div class="contact-icon">
+👍
+</div>
+
+<h3>Facebook</h3>
+
+<a
+href="https://www.facebook.com/"
+target="_blank"
+rel="noopener"
+>
+Visit Facebook
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MODAL ================= -->
 
 <div class="modal" id="modal">
 
-  <div class="modal-box">
+<div class="modal-box">
 
-    <button class="close" onclick="closeModal()">×</button>
+<button class="close" onclick="closeInfo()">
+×
+</button>
 
-    <div id="modalContent"></div>
+<div id="modalContent"></div>
 
-  </div>
+</div>
 
 </div>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-  <div class="footer-title">
-    🌵 Rajasthan Roots
-  </div>
+<div class="footer-logo">
+🌵 Rajasthan Roots
+</div>
 
-  <p style="margin-top:10px">
-    पधारो म्हारे राजस्थान ❤️
-  </p>
+<p style="margin-top:10px;">
+पधारो म्हारे राजस्थान ❤️
+</p>
 
-  <p style="margin-top:15px;color:#d9b99e">
-    © 2026 Rajasthan Roots • Made with ❤️ for Rajasthan
-  </p>
+<div class="footer-links">
+
+<a href="#home">Home</a>
+<a href="#cities">Cities</a>
+<a href="#culture">Culture</a>
+<a href="#food">Food</a>
+<a href="#travel">Travel</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<p class="footer-copy">
+© 2026 Rajasthan Roots • Rajasthan Guide
+</p>
 
 </footer>
 
 
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
 
-/* ================= MODAL SYSTEM ================= */
+const modal =
+document.getElementById("modal");
 
-const modal = document.getElementById("modal");
-const content = document.getElementById("modalContent");
+const modalContent =
+document.getElementById("modalContent");
 
 
-function openModal(type){
+function openInfo(type){
 
-  let html = "";
+let html="";
 
-  if(type === "desert"){
 
-    html = `
+if(type==="desert"){
 
-    <h2>🐪 Thar Desert — थार रेगिस्तान</h2>
+html=`
 
-    <div class="big-animation scene">
+<h2>🐪 Thar Desert — थार रेगिस्तान</h2>
 
-      <div class="mini-sun"></div>
+<div class="scene" style="height:300px;margin:20px 0;border-radius:20px;">
 
-      <div class="mini-dune"></div>
+<div class="scene-sun"></div>
 
-      <div class="mini-camel">🐪</div>
+<div class="scene-dune"></div>
 
-    </div>
+<div class="scene-camel">🐪</div>
 
-    <p>
-    थार रेगिस्तान राजस्थान की पहचान का एक महत्वपूर्ण हिस्सा है।
-    सुनहरी रेत, ऊँटों की यात्रा और सूर्यास्त यहाँ के अनुभव को
-    खास बनाते हैं।
-    </p>
+</div>
 
-    <br>
+<p>
+थार रेगिस्तान राजस्थान के प्राकृतिक landscapes
+का एक महत्वपूर्ण हिस्सा है। सुनहरी रेत,
+camel journeys और desert sunsets यहाँ के
+अनुभव का हिस्सा हैं।
+</p>
 
-    <p>
-    <b>English:</b>
-    Experience the golden dunes, desert landscapes and
-    traditional camel journeys of Rajasthan.
-    </p>
+<br>
 
-    `;
+<p>
+<b>English:</b>
+Explore the golden desert landscapes,
+camel journeys and beautiful sunsets of Rajasthan.
+</p>
 
-  }
+`;
 
+}
 
-  else if(type === "safa"){
 
-    html = `
+else if(type==="safa"){
 
-    <h2>👳 Rajasthani Safa — राजस्थानी साफा</h2>
+html=`
 
-    <div class="big-animation scene">
+<h2>👳 Rajasthani Safa</h2>
 
-      <div class="mini-dune"></div>
+<div class="scene" style="height:300px;margin:20px 0;border-radius:20px;">
 
-      <div class="safa"></div>
+<div class="scene-dune"></div>
 
-      <div class="person">🧔</div>
+<div class="safa-top"></div>
 
-    </div>
+<div class="safa-person">🧔</div>
 
-    <p>
-    साफा राजस्थान की पारंपरिक पोशाक और सांस्कृतिक पहचान का
-    एक सुंदर हिस्सा है। अलग-अलग क्षेत्रों में इसके रंग और
-    बाँधने की शैली अलग दिखाई दे सकती है।
-    </p>
+</div>
 
-    <br>
+<p>
+राजस्थानी साफा पारंपरिक पहनावे का एक
+सुंदर हिस्सा है। इसके रंग और पहनने की
+शैली अलग-अलग क्षेत्रों में अलग हो सकती है।
+</p>
 
-    <p>
-    <b>English:</b>
-    The traditional Rajasthani safa is known for its
-    colourful regional styles and cultural importance.
-    </p>
+<br>
 
-    `;
+<p>
+<b>English:</b>
+The Rajasthani safa is a colourful part of
+traditional clothing and regional culture.
+</p>
 
-  }
+`;
 
+}
 
-  else if(type === "dalbati"){
 
-    html = `
+else if(type==="dalbati"){
 
-    <h2>🍛 Dal Baati Churma</h2>
+html=`
 
-    <div class="big-animation scene food-scene">
+<h2>🍛 Dal Baati Churma</h2>
 
-      <div class="plate">
+<div class="scene food-scene"
+style="height:300px;margin:20px 0;border-radius:20px;">
 
-        <div class="baati b1"></div>
-        <div class="baati b2"></div>
-        <div class="baati b3"></div>
+<div class="plate">
 
-        <div class="churma"></div>
+<div class="baati baati1"></div>
+<div class="baati baati2"></div>
+<div class="baati baati3"></div>
 
-      </div>
+<div class="churma"></div>
 
-      <div class="spoon"></div>
+</div>
 
-    </div>
+</div>
 
-    <p>
-    दाल बाटी चूरमा राजस्थान के प्रसिद्ध पारंपरिक व्यंजनों
-    में से एक है। यह राजस्थानी भोजन की पहचान से जुड़ा हुआ
-    लोकप्रिय व्यंजन है।
-    </p>
+<p>
+दाल बाटी चूरमा राजस्थान के प्रसिद्ध
+पारंपरिक व्यंजनों में से एक है।
+</p>
 
-    <br>
+<br>
 
-    <p>
-    <b>English:</b>
-    Dal Baati Churma is one of Rajasthan's well-known
-    traditional dishes.
-    </p>
-
-    `;
-
-  }
-
-
-  else if(type === "fort"){
-
-    html = `
-
-    <h2>🏰 Royal Rajasthan — राजस्थानी किले</h2>
-
-    <div class="big-animation scene fort-scene">
-
-      <div class="mini-sun"></div>
-
-      <div class="fort">🏰</div>
-
-    </div>
-
-    <p>
-    राजस्थान अपने ऐतिहासिक किलों, महलों और heritage
-    architecture के लिए प्रसिद्ध है।
-    </p>
-
-    <br>
-
-    <p>
-    <b>English:</b>
-    Rajasthan is known for its historic forts,
-    palaces and remarkable heritage architecture.
-    </p>
-
-    `;
-
-  }
-
-
-  else if(type === "folk"){
-
-    html = `
-
-    <h2>💃 Rajasthan Folk Culture</h2>
-
-    <div class="big-animation scene dance-scene">
-
-      <div class="dancer">💃</div>
-
-    </div>
-
-    <p>
-    राजस्थान की लोक संस्कृति में संगीत, नृत्य, रंगीन
-    पोशाक और पारंपरिक उत्सवों की महत्वपूर्ण भूमिका है।
-    </p>
-
-    <br>
-
-    <p>
-    <b>English:</b>
-    Rajasthan's folk culture brings together music,
-    dance, colourful clothing and tr
+<p>
+<b>English:</b>
+Dal Baati Churma is one of the well-known
+traditional dishes assoc
